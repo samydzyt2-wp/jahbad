@@ -1039,11 +1039,15 @@
       .nav-links {
         display: none;
       }
+      .hero {
+        padding: 40px 0 30px;
+      }
       .hero h1 {
-        font-size: 38px;
+        font-size: 32px;
       }
       .hero-desc {
         font-size: 15px;
+        padding: 0 10px;
       }
       .cta-group {
         flex-direction: column;
@@ -1051,16 +1055,77 @@
         max-width: 320px;
         margin-left: auto;
         margin-right: auto;
+        gap: 16px;
       }
       .btn-secondary {
         justify-content: center;
       }
       .section-header h2 {
-        font-size: 28px;
+        font-size: 26px;
       }
       .footer-wrapper {
         flex-direction: column;
         gap: 30px;
+      }
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+      .stat-card h3 {
+        font-size: 32px;
+      }
+      .modes-grid, .steps {
+        grid-template-columns: 1fr;
+      }
+      .mockup-container {
+        transform: rotateX(0deg);
+        padding: 8px;
+        border-radius: 24px;
+      }
+      .screen-body {
+        padding: 16px;
+      }
+      .screen-title {
+        font-size: 22px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 26px;
+      }
+      .stat-card h3 {
+        font-size: 26px;
+      }
+      .stat-card p {
+        font-size: 12px;
+      }
+      .logo-text {
+        font-size: 20px;
+      }
+      .logo-img {
+        width: 36px;
+        height: 36px;
+      }
+      .modal-content {
+        padding: 24px;
+        width: 95%;
+      }
+      .modal-content h3 {
+        font-size: 20px;
+      }
+      .screen-btn, .screen-btn-outline {
+        font-size: 10px;
+        padding: 8px 16px;
+      }
+      .screen-nav-item span {
+        font-size: 8px;
+      }
+      .feat-info h3 {
+        font-size: 22px;
+      }
+      .badge {
+        font-size: 11px;
       }
     }
   </style>
@@ -1085,7 +1150,7 @@
         <li><a href="#modes" class="nav-link">أطوار اللعب</a></li>
         <li><a href="#features" class="nav-link">المميزات</a></li>
         <li><a href="#guide" class="nav-link">دليل التثبيت</a></li>
-        <li><a href="D:\Jahbad\app-release.apk" class="btn-nav">تحميل APK</a></li>
+        <li><a href="https://www.mediafire.com/file/flcv0u19fon1grg/Jahbad.apk/file" target="_blank" class="btn-nav">تحميل APK</a></li>
       </ul>
     </div>
   </header>
@@ -1387,7 +1452,7 @@
           <li><a href="#modes">أطوار اللعب</a></li>
           <li><a href="#features">مميزات التطبيق</a></li>
           <li><a href="#guide">دليل التثبيت</a></li>
-          <li><a href="./jahbad.apk">تنزيل التطبيق APK</a></li>
+          <li><a href="https://www.mediafire.com/file/flcv0u19fon1grg/Jahbad.apk/file" target="_blank">تنزيل التطبيق APK</a></li>
         </ul>
       </div>
 
@@ -1494,12 +1559,7 @@
       if (this.checked) {
         // Trigger APK download 1.2s after clicking, during the Uiverse.io animation
         setTimeout(function() {
-          const link = document.createElement('a');
-          link.href = './jahbad.apk';
-          link.download = 'jahbad.apk';
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
+          window.open('https://www.mediafire.com/file/flcv0u19fon1grg/Jahbad.apk/file', '_blank');
         }, 1200);
       }
     });
